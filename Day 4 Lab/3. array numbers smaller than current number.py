@@ -1,16 +1,12 @@
-a=int(input("Enter length of the list:"))
-(c,e)=([],[])
-if(a>0):
-    for i in range(0,a):
-        b=int(input("enter element:"))
-        c.append(b)
-    for i in range(0,a):
-        b=0
-        for j in range(0,a):
-            if(c[j]<c[i]):
-                b=b+1
-        e.append(b)
-    print("INPUT=",c)
-    print("OUTPUT",e)
-else:
-    print("INVALID INPUT")
+n=int(input("ENTER THE NUMBER OF ELEMENTS --> "))
+l=[]
+lcount=[]
+for i in range(n):
+    l.append(int(input("ENTER ELEMENT" + str(i+1)+" --> ")))
+for a in l:
+    i=0
+    for b in l:
+        if b<a:
+            i+=1
+    lcount.append(i)
+print(lcount)
