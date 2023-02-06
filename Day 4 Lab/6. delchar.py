@@ -1,9 +1,12 @@
-def delchar(a,b):
-    c=len(a)
-    d=""
-    for i in range(0,c):
-        if a[i] not in b:
-            d+=a[i]
-    print("String after deletion :",d)
-a=input("Enter a string:")
-b=input("Enter character to be deleted :")
+def delchar(s,c):
+    l=[]
+    if len(c)==1:
+        for a in s:
+            if a!=c:
+                l.append(a)
+        print("".join(l))
+    else:
+        print(s)
+s=input("ENTER STRING --> ")
+c=input("ENTER CHARACTER TO DELETE FROM STRING --> ")
+delchar(s,c)
